@@ -1,27 +1,13 @@
-import { engineer } from "../data/mock";
+import CarroArmado from "../components/CarroArmado";
 
 export default function EngineerView() {
   return (
     <div>
       <h2>Vista Engineer</h2>
-      <p><strong>Nombre:</strong> {engineer.nombre}</p>
-      <p><strong>Equipo:</strong> {engineer.equipo}</p>
+      <p><strong>Equipo:</strong> Red Apex</p>
 
-      <h3>Carros</h3>
-      <ul>
-        {engineer.carros.map((c, i) => (
-          <li key={i}>{c}</li>
-        ))}
-      </ul>
-
-      <h3>Inventario de Partes</h3>
-      <ul>
-        {engineer.partes.map((p, i) => (
-          <li key={i}>
-            {p.categoria} – Cantidad: {p.cantidad}
-          </li>
-        ))}
-      </ul>
+      <CarroArmado nombreCarro="Carro 1" />
+      <CarroArmado nombreCarro="Carro 2" />
     </div>
   );
 }

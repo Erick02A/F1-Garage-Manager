@@ -4,14 +4,16 @@ const equipos = [
     nombre: "Red Apex",
     miembros: [
       { nombre: "Carlos", rol: "Engineer" },
-      { nombre: "Ana", rol: "Driver" }
+      { nombre: "Ana", rol: "Driver" },
+      { nombre: "Monster", rol: "Patrocinador" }
     ]
   },
   {
     nombre: "Blue Velocity",
     miembros: [
       { nombre: "Luis", rol: "Engineer" },
-      { nombre: "María", rol: "Driver" }
+      { nombre: "María", rol: "Driver" },
+      { nombre: "RedBull", rol: "Patrocinador" }
     ]
   }
 ];
@@ -39,6 +41,8 @@ export default function AdminView() {
           ))}
         </tbody>
       </table>
+              <button> Crear Simulacion
+        </button>
 
       {equipos.map((e, i) => (
         <div key={i} style={{ marginBottom: "15px" }}>
@@ -49,9 +53,14 @@ export default function AdminView() {
                 {m.nombre} – {m.rol}
               </li>
             ))}
+            
           </ul>
+          
         </div>
+        
       ))}
+      <button> Crear Equipo
+        </button>
     </div>
   );
 
